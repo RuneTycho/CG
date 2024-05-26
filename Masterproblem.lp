@@ -1,116 +1,31 @@
 \ Model Master Problem IP
 \ LP format - for model browsing. Use MPS format to capture full model detail.
 Maximize
-  12143.5838923077 route[1] + 11978.6249425641 route[2]
-   + 12143.5838923077 route[3] + 11978.6249425641 route[4]
-   + 9276.252775000004 route[5] + 10205.02310192308 route[6]
-   + 9276.252775000004 route[7] + 10205.02310192308 route[8]
-   + 9031.04364 route[9] + 9272.441072500003 route[10]
-   + 9031.04364 route[11] + 9272.441072500003 route[12]
-   + 7822.251136666667 route[13] + 5859.093559166667 route[14]
-   + 7822.251136666667 route[15] + 5859.093559166667 route[16]
-   + 6284.2075775 route[17] + 7057.830234166667 route[18]
-   + 6284.2075775 route[19] + 7057.830234166667 route[20]
-   + 8169.341955320515 route[21] + 10202.52011198718 route[22]
-   + 8169.341955320515 route[23] + 10202.52011198718 route[24]
-   + 5652.236775 route[25] + 5957.0995 route[26] + 5652.236775 route[27]
-   + 5957.0995 route[28] + 7291.541615384615 route[29]
-   + 5866.094823333334 route[30] + 7291.541615384615 route[31]
-   + 5866.094823333334 route[32] + 11072.98731820513 route[33]
-   + 4712.203275 route[34] + 11072.98731820513 route[35]
-   + 4712.203275 route[36] + 6260.522630769231 route[37]
-   + 6075.794892307692 route[38] + 6260.522630769231 route[39]
-   + 6075.794892307692 route[40] + 5352.78149423077 route[41]
-   + 7063.565157692307 route[42] + 5352.78149423077 route[43]
-   + 7063.565157692307 route[44] + 6491.836825 route[45]
-   + 3497.8697 route[46] + 6491.836825 route[47] + 3497.8697 route[48]
-   + 9133.870087545729 route[49] + 4904.564969230769 route[50]
-   + 9133.870087545729 route[51] + 4904.564969230769 route[52]
-   + 5421.536680769231 route[53] + 5421.536680769231 route[54]
-   + 8509.414976923077 route[55] + 2334.127911538461 route[56]
-   + 2334.127911538461 route[57]
+  5676.316666666667 route[1] + 6612.316666666667 route[2]
+   + 5676.316666666667 route[3] + 6612.316666666667 route[4]
+   + 1811.636222222222 route[5] + 3606.279379166665 route[6]
+   + 1811.636222222222 route[7] + 3606.279379166665 route[8]
+   + 3723.962222222222 route[9] + 3740.636222222222 route[10]
+   + 3723.962222222222 route[11] + 3740.636222222222 route[12]
 Subject To
- tech_type_1_time_window_1_availability: 10 route[1] + 10 route[3]
-   + 9 route[5] + 9 route[7] + 10 route[9] + 10 route[11] + 6 route[13]
-   + 6 route[15] + 6 route[17] + 6 route[19] + 10 route[21] + 10 route[23]
-   + 6 route[25] + 6 route[27] + 6 route[29] + 6 route[31] + 8 route[33]
-   + 8 route[35] + 3 route[37] + 3 route[39] + 7 route[41] + 7 route[43]
-   + 8 route[45] + 8 route[47] + 9 route[49] + 9 route[51] + 7 route[53]
-   + 7 route[54] <= 24
- tech_type_2_time_window_1_availability: 8 route[1] + 8 route[3]
-   + 7 route[5] + 7 route[7] + 4 route[9] + 4 route[11] + 3 route[13]
-   + 3 route[15] + 2 route[17] + 2 route[19] + 10 route[21] + 10 route[23]
-   + 5 route[25] + 5 route[27] + 9 route[29] + 9 route[31] + 6 route[33]
-   + 6 route[35] + 7 route[37] + 7 route[39] + 6 route[41] + 6 route[43]
-   + 3 route[45] + 3 route[47] + 8 route[49] + 8 route[51] + 6 route[53]
-   + 6 route[54] <= 24
- tech_type_1_time_window_2_availability: 10 route[2] + 10 route[4]
-   + 9 route[6] + 9 route[8] + 6 route[10] + 6 route[12] + 18 route[14]
-   + 18 route[16] + 14 route[18] + 14 route[20] + 10 route[22]
-   + 10 route[24] + 7 route[26] + 7 route[28] + 4 route[30] + 4 route[32]
-   + 4 route[34] + 4 route[36] + 4 route[38] + 4 route[40] + 11 route[42]
-   + 11 route[44] + 3 route[46] + 3 route[48] + 5 route[50] + 5 route[52]
-   + 8 route[55] + 4 route[56] + 4 route[57] <= 24
- tech_type_2_time_window_2_availability: 8 route[2] + 8 route[4]
-   + 7 route[6] + 7 route[8] + 5 route[10] + 5 route[12] + 6 route[14]
-   + 6 route[16] + 5 route[18] + 5 route[20] + 8 route[22] + 8 route[24]
-   + 5 route[26] + 5 route[28] + 7 route[30] + 7 route[32] + 5 route[34]
-   + 5 route[36] + 8 route[38] + 8 route[40] + 9 route[42] + 9 route[44]
-   + 2 route[46] + 2 route[48] + 8 route[50] + 8 route[52] + 10 route[55]
-   + 3 route[56] + 3 route[57] <= 24
+ tech_type_1_time_window_1_availability: 7 route[1] + 7 route[3]
+   + 2 route[5] + 2 route[7] + 5 route[9] + 5 route[11] <= 24
+ tech_type_2_time_window_1_availability: 6 route[1] + 6 route[3]
+   + 3 route[5] + 3 route[7] + 3 route[9] + 3 route[11] <= 24
+ tech_type_1_time_window_2_availability: 7 route[2] + 7 route[4]
+   + 2 route[6] + 2 route[8] + 2 route[10] + 2 route[12] <= 24
+ tech_type_2_time_window_2_availability: 6 route[2] + 6 route[4]
+   + 3 route[6] + 3 route[8] + 3 route[10] + 3 route[12] <= 24
  job_1_once: route[1] + route[2] + route[3] + route[4] + route[9]
-   + route[10] + route[11] + route[12] + route[13] + route[14] + route[15]
-   + route[16] + route[17] + route[18] + route[19] + route[20] + route[21]
-   + route[22] + route[23] + route[24] + route[33] + route[35] + route[41]
-   + route[42] + route[43] + route[44] + route[45] + route[47] + route[49]
-   + route[51] + route[53] + route[54] <= 1
+   + route[11] <= 1
  job_2_once: route[1] + route[2] + route[3] + route[4] + route[5]
-   + route[6] + route[7] + route[8] + route[9] + route[10] + route[11]
-   + route[12] + route[13] + route[14] + route[15] + route[16] + route[21]
-   + route[22] + route[23] + route[24] + route[25] + route[26] + route[27]
-   + route[28] + route[33] + route[34] + route[35] + route[36] + route[42]
-   + route[44] + route[50] + route[52] + route[55] + route[56] + route[57]
-   <= 1
- job_3_once: route[1] + route[2] + route[3] + route[4] + route[5]
-   + route[6] + route[7] + route[8] + route[21] + route[22] + route[23]
-   + route[24] + route[29] + route[30] + route[31] + route[32] + route[33]
-   + route[34] + route[35] + route[36] + route[37] + route[38] + route[39]
-   + route[40] + route[41] + route[42] + route[43] + route[44] + route[49]
-   + route[50] + route[51] + route[52] + route[53] + route[54] + route[55]
-   <= 1
- job_4_once: route[1] + route[2] + route[3] + route[4] + route[5]
-   + route[6] + route[7] + route[8] + route[9] + route[10] + route[11]
-   + route[12] + route[13] + route[14] + route[15] + route[16] + route[17]
-   + route[18] + route[19] + route[20] + route[25] + route[27] + route[29]
-   + route[31] + route[33] + route[35] + route[37] + route[39] + route[45]
-   + route[47] + route[49] + route[51] <= 1
- job_5_once: route[1] + route[2] + route[3] + route[4] + route[5]
-   + route[6] + route[7] + route[8] + route[9] + route[10] + route[11]
-   + route[12] + route[18] + route[20] + route[21] + route[22] + route[23]
-   + route[24] + route[26] + route[28] + route[29] + route[30] + route[31]
-   + route[32] + route[38] + route[40] + route[46] + route[48] + route[55]
-   <= 1
- one_route_per_vessel_Vessel_1_tw_1: route[1] + route[5] + route[9]
-   + route[13] + route[17] + route[21] + route[25] + route[29] + route[33]
-   + route[37] + route[41] + route[45] + route[49] + route[53] <= 1
- one_route_per_vessel_Vessel_1_tw_2: route[2] + route[6] + route[10]
-   + route[14] + route[18] + route[22] + route[26] + route[30] + route[34]
-   + route[38] + route[42] + route[46] + route[50] + route[55] + route[56]
-   <= 1
- one_route_per_vessel_Vessel_2_tw_1: route[3] + route[7] + route[11]
-   + route[15] + route[19] + route[23] + route[27] + route[31] + route[35]
-   + route[39] + route[43] + route[47] + route[51] + route[54] <= 1
- one_route_per_vessel_Vessel_2_tw_2: route[4] + route[8] + route[12]
-   + route[16] + route[20] + route[24] + route[28] + route[32] + route[36]
-   + route[40] + route[44] + route[48] + route[52] + route[57] <= 1
+   + route[6] + route[7] + route[8] + route[10] + route[12] <= 1
+ one_route_per_vessel_Vessel_1_tw_1: route[1] + route[5] + route[9] <= 1
+ one_route_per_vessel_Vessel_1_tw_2: route[2] + route[6] + route[10] <= 1
+ one_route_per_vessel_Vessel_2_tw_1: route[3] + route[7] + route[11] <= 1
+ one_route_per_vessel_Vessel_2_tw_2: route[4] + route[8] + route[12] <= 1
 Bounds
 Binaries
  route[1] route[2] route[3] route[4] route[5] route[6] route[7] route[8]
- route[9] route[10] route[11] route[12] route[13] route[14] route[15]
- route[16] route[17] route[18] route[19] route[20] route[21] route[22]
- route[23] route[24] route[25] route[26] route[27] route[28] route[29]
- route[30] route[31] route[32] route[33] route[34] route[35] route[36]
- route[37] route[38] route[39] route[40] route[41] route[42] route[43]
- route[44] route[45] route[46] route[47] route[48] route[49] route[50]
- route[51] route[52] route[53] route[54] route[55] route[56] route[57]
+ route[9] route[10] route[11] route[12]
 End

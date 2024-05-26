@@ -7,7 +7,7 @@ import os
 
 data_file =""
 
-data_files= ["T5_C2all_data.csv"]
+data_files= ["T2_C1all_data.csv"]
 route_File = ""
 
 
@@ -1021,7 +1021,7 @@ def extract_new_routes_from_subproblem(subproblem, arcs, ND, NC, n, t, v, df_rou
 
 
     new_routes = [new_route]
-    write_variables_to_csv_horizontal(subproblem, max_route_id-1)
+    #write_variables_to_csv_horizontal(subproblem, max_route_id-1)
     return new_routes, max_route_id
     # if profit>2:
     #     return new_routes, max_route_id
@@ -1055,7 +1055,7 @@ def checkwotime( nodes, arcs, dual_prices, n, t, v, df_routes, num_technician_ty
     return False
     
 
-def append_solution_to_csv(df_routes, lp_solution, ip_solution, csv_file, duration):
+def append_solution_to_csv(df_routes, lp_solution, ip_solution, csv_file, duration,dual_prices,optimality):
     # Open the CSV file in append mode
     with open(csv_file, 'a') as file:
         # Write the LP solution
@@ -1070,6 +1070,12 @@ def append_solution_to_csv(df_routes, lp_solution, ip_solution, csv_file, durati
 
         # Write the duration
         file.write(f"\nExecution Time (seconds),,,,,,,,,,,{duration}\n")
+        file.write(f"\n Sub problem was solved to optimality?,,,,,, {optimality}")
+
+        # Write the dual prices if the value is greater than 0.1
+        for key, price in dual_prices.items():
+            if price > 0.1:
+                file.write(f"\n{key},{price}\n")
 
 
 def add_total_profit_to_df(solution, df_routes, solution_type):
@@ -1135,9 +1141,9 @@ def run_column_generation(timelimit1,timelimit2,route_File):
    
    #her må du fiksa slik at du skiller mellom tom for tid og optiml funnet
 
-    print("Final optimization with the best set of routes(LP):")
-    model, route_vars = build_master_problem(df_routes, df_parameters)
-    lp_solution = optimize_master_problem(model, df_routes, route_vars)
+    #print("Final optimization with the best set of routes(LP):")
+    #model, route_vars = build_master_problem(df_routes, df_parameters)
+    #lp_solution = optimize_master_problem(model, df_routes, route_vars)
 
     print("Final optimization with the best set of routes(IP):")
     model_IP, route_vars = build_master_problem_IP(df_routes, df_parameters)
@@ -1147,7 +1153,7 @@ def run_column_generation(timelimit1,timelimit2,route_File):
     duration = end_time - start_time
 
     # Append the solutions to the CSV file
-    append_solution_to_csv(df_routes, lp_solution, ip_solution, route_File, duration)
+    append_solution_to_csv(df_routes, s, ip_solution, route_File, duration,dual_prices,optimality)
 
 
 

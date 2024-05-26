@@ -3,12 +3,9 @@ tech_type_1_time_window_1_availability,0.0
 tech_type_2_time_window_1_availability,0.0
 tech_type_1_time_window_2_availability,0.0
 tech_type_2_time_window_2_availability,0.0
-job_1_once,2873.347456776498
-job_2_once,2334.1279115384614
-job_3_once,2570.4370576923075
-job_4_once,3690.0855730769235
-job_5_once,3622.971588461539
+job_1_once,3723.9622222222224
+job_2_once,3740.6362222222224
 one_route_per_vessel_Vessel_1_tw_1,0.0
 one_route_per_vessel_Vessel_1_tw_2,0.0
 one_route_per_vessel_Vessel_2_tw_1,0.0
-one_route_per_vessel_Vessel_2_tw_2,-0.0
+one_route_per_vessel_Vessel_2_tw_2,0.0
