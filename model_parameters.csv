@@ -1,0 +1,11 @@
+Parameter,Value
+Vessels,3
+Time Windows,2
+Number of Turbines,5
+Speed Knots,21
+Price Diesel,2
+Price Electric,0.075
+Max NM Battery,50
+Type Technicians,2
+Number of Technicians,"[(24, 24), (24, 24)]"
+Number of Chargers,2
